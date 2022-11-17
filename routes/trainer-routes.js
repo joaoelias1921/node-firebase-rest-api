@@ -14,6 +14,7 @@ const router = express.Router()
 let _ctrl = new controller()
 
 // definindo as rotas
+router.post("/login", _ctrl.authenticate)
 router.get('/', auth, _ctrl.get)
 router.get('/:id', auth, _ctrl.getById)
 router.post('/', auth, _ctrl.post)
